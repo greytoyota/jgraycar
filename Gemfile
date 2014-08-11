@@ -56,6 +56,9 @@ gem 'simple_form'
 # Better nested forms
 gem 'cocoon'
 
+# Use unicorn as the app server
+gem 'unicorn'
+
 # Allows for use of Haml rather than standard erb
 gem 'haml'
 gem 'haml-rails', group: :development
