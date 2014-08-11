@@ -1,0 +1,64 @@
+// Place all the styles related to the header and footer here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+#nav-header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+nav#nav-bar {
+    text-align: left;
+    background-color: #222;
+    .link {
+        display: inline-block;
+        margin: 0px 5px;
+        padding: 10px 10px;
+        a {
+            height: 100%;
+            display: inline;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        a:hover {
+            color: gray;
+        }
+        ul {
+            position: absolute;
+            padding-left: 0px;
+            left: -9999px;
+            list-style-type: none;
+            li {
+                background-color: black;
+                padding: 4px;
+                padding-bottom: 0px;
+                float: none;
+                text-align: left;
+                a {
+                    paddin-left: 8px;
+                    color: white;
+                }
+            }
+            li:last-child {
+                padding-bottom: 8px;
+            }
+        }
+        ul#projects-dropdown {
+            li {
+                width: 80px;
+            }
+        }
+    }
+    .link:hover {
+        ul {
+            z-index: 5;
+            margin-top: 5px;
+            margin-left: -10px;
+            left: auto;
+        }
+    }
+}
