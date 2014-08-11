@@ -41,6 +41,21 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Device for authentification
+gem 'devise'
+
+# Enables prettier urls, ie caltaiko.com/members/tom-hata vs caltaiko.com/members/1
+gem 'friendly_id', '~> 5.0.0'
+
+# Allows for easier meta tag setting
+gem 'metamagic'
+
+# Prettier forms
+gem 'simple_form'
+
+# Better nested forms
+gem 'cocoon'
+
 # Allows for use of Haml rather than standard erb
 gem 'haml'
 gem 'haml-rails', group: :development

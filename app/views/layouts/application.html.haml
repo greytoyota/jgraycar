@@ -1,0 +1,34 @@
+!!!
+%html(lang="en-US")
+  %head
+    %meta(charset="utf-8")
+    = metamagic title: "Joel Graycar",
+      keywords: "joel, graycar, personal, portfolio"
+
+    %link(href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css")
+    %link(href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css")
+
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+    = favicon_link_tag "favicon.png", rel: "icon", type: "image/png"
+    = favicon_link_tag "favicon.png", rel: "apple-touch-icon", type: "image/png"
+
+  %body{ class: "#{controller.controller_name}", id: "#{controller.action_name}" }
+    #page-wrapper
+      #content-wrapper
+        %header#nav-header
+          = render "layouts/header"
+
+        .devise-notice
+          - if notice
+            %p.alert-success= notice
+          - if alert
+            %p.alert-danger= alert
+
+        #page-content
+          = yield
+
+      %footer
+        = render "layouts/footer"    

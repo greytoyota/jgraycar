@@ -1,0 +1,21 @@
+%nav#nav-bar
+  .link#home-page
+    = link_to "HOME", root_url
+
+  .link#performances-page
+    = link_to "PROJECTS", projects_path
+    %ul#projects-dropdown
+      - projects = Project.all
+      - projects.each do |project|
+        %li
+          = link_to project.title.upcase, project
+
+  .link#about-page
+    = link_to "ABOUT", "/about"
+
+  .link#contact-page
+    = link_to "CONTACT", "/contact"
+
+  - if user_signed_in?
+    .link
+      = link_to "LOGOUT", "/logout", "data-no-turbolink" => true
