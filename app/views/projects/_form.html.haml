@@ -1,1 +1,11 @@
-%h1 Project Form
+= simple_form_for @project do |f|
+
+  = f.input :title
+
+  = f.input :date
+
+  = f.input :link
+
+  = f.input :description
+
+  = f.button :submit
