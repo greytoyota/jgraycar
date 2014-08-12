@@ -33,11 +33,10 @@ nav#nav-bar {
             left: -9999px;
             list-style-type: none;
             li {
-                background-color: #222;
-                padding-top: 7px;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-bottom: 0px;
+                background-color: #383838;
+                border: 1px #222 solid;
+                border-top: none;
+                padding: 5px 10px;
                 float: none;
                 text-align: left;
                 a {
@@ -45,20 +44,17 @@ nav#nav-bar {
                     font-size: 15px;
                 }
             }
-            li:last-child {
-                padding-bottom: 8px;
-            }
         }
         ul#projects-dropdown {
             li {
-                width: 104px;
+                width: 90px;
             }
         }
     }
     .link:hover {
         ul {
             z-index: 5;
-            margin-top: 5px;
+            margin-top: 10px;
             margin-left: -10px;
             left: auto;
         }

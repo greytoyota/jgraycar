@@ -8,7 +8,7 @@
       - projects = Project.all
       - projects.each do |project|
         %li
-          = link_to project.title.upcase, project
+          = link_to project.title, project
 
   .link#about-page
     = link_to "ABOUT", "/about"
