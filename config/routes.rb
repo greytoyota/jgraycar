@@ -4,12 +4,20 @@ Rails.application.routes.draw do
 
   root 'front_page#main'
 
-  devise_for :users
-
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
 
   resources :projects
+
+  devise_for :users
+  devise_scope :user do
+    get "login", :to => "devise/sessions#new"
+    get "settings", :to => "devise/registrations#edit"
+    get "logout",   :to => "devise/sessions#destroy"
+    # MUST BE REMOVED BEFORE DISTRIBUTING; there should be no way to register new users
+    # Included purely for testing reasons
+    get "register", to: "devise/registrations#new"
+  end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
