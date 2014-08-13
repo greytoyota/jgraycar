@@ -3,12 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 
+article.project {
+    h2 a {
+        text-decoration: none;
+    }
+    h2 {
+        font-family: $main-font;
+    }
+    small {
+        display: block;
+    }
+    section.edit-links {
+        text-align: center;
+    }
+}
+
 nav#projects {
     position: fixed;
     left: 0px;
     top: 43px;
     height: 100%;
-    width: 200px;
+    width: 209px;
     background-color: $sub-color;
     .link {
         margin: 13px 0px;

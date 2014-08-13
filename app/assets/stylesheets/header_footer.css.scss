@@ -15,8 +15,8 @@ nav#nav-bar {
     background-color: #222;
     .link {
         display: inline-block;
-        margin: 0px 5px;
-        padding: 10px 10px;
+        margin: 0px;
+        padding: 10px 13px;
         a {
             height: 100%;
             display: inline;
@@ -31,6 +31,13 @@ nav#nav-bar {
     }
 }
 
+body.front_page #nav-bar .link#home-page,
+body.projects #nav-bar .link#projects-page,
+body.pages#about #nav-bar .link#about-page,
+body.pages#contact #nav-bar .link#contact-page {
+    background-color: $sub-color;
+}
+
 #external-links {
     position: fixed;
     height: 30px;
@@ -38,6 +45,7 @@ nav#nav-bar {
     right: 0px;
     margin-bottom: 7px;
     margin-right: 10px;
+    text-align: center;
     .icons {
         img {
             display: initial;

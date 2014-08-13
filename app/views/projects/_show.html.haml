@@ -1,15 +1,16 @@
-- if project.link.length > 0
-  %h2
-    = link_to project.title, project.link
-- else
-  %h2= project.title
+%article.project
+  - if project.link.length > 0
+    %h2
+      = link_to project.title, project.link, target: "_blank"
+  - else
+    %h2= project.title
 
-%small= project.date
+  %small= project.year
 
-:markdown
-  #{project.description}
+  :markdown
+    #{project.description}
 
-%section.edit-links
-  = link_to "Edit", edit_project_path(project)
-  = link_to "Delete", project_path(project), method: :delete,
-    data: { confirm: "Are you sure you want to delete project #{project.title}?" }
+  %section.edit-links
+    = link_to "Edit", edit_project_path(project)
+    = link_to "Delete", project_path(project), method: :delete,
+      data: { confirm: "Are you sure you want to delete project #{project.title}?" }

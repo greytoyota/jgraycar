@@ -7,13 +7,14 @@
     margin-top: 60px;
 }
 
-* {
+p, h1, h2, h3, a, small {
     text-align: center;
 }
 
 a {
+    display: inline-block;
     color: $link-color;
-    font-family: $link-font;
+    font-family: $main-font;
     &:hover {
         color: $sub-color;
     }
@@ -21,4 +22,8 @@ a {
 
 p {
     font-family: $main-font;
+}
+
+h1, h2, h3 {
+    font-family: $header-font;
 }

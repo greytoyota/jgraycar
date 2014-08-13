@@ -3,12 +3,12 @@ class Project < ActiveRecord::Base
   friendly_id :slug_candidates, use: :slugged
   validates :title, presence: true
   validates :description, presence: true
-  validates :date, presence: true
+  validates :year, presence: true, numericality: { only_integer: true, greather_than: 2012 }
 
   def slug_candidates
     [
      :title,
-     [:title, :date]
+     [:title, :year]
     ]
   end
 end
