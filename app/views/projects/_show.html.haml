@@ -1,9 +1,9 @@
 %article.project
   - if project.link.length > 0
-    %h2
+    %h2(id="#{project.slug}")
       = link_to project.title, project.link, target: "_blank"
   - else
-    %h2= project.title
+    %h2(id="#{project.slug}")= project.title
 
   %small= project.year
 

@@ -1,7 +1,7 @@
 %nav#projects
   - @projects.each do |project|
     .link
-      = link_to project.title, project
+      = link_to project.title, "/projects##{project.slug}"
 
 #project-content
   = render "show", project: @project
