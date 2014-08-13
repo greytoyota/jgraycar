@@ -5,24 +5,30 @@
 
 #project-content {
     margin-left: $project-nav-width;
-    article.project {
-        margin-bottom: 50px;
-        h2 a {
-            text-decoration: none;
-        }
-        h2 {
-            font-family: $main-font;
-        }
-        small {
-            display: block;
-        }
-        section.edit-links {
-            text-align: center;
-        }
+}
+
+article.project {
+    margin: 0px auto 50px auto;
+    background-color: $sub-color-2;
+    width: 80%;
+    padding: 20px;
+    h2 a {
+        text-decoration: none;
     }
-    .add-new {
+    h2 {
+        margin: 0px auto;
+        font-family: $main-font;
+    }
+    small {
+        display: block;
+    }
+    section.edit-links {
         text-align: center;
     }
+}
+
+.add-new {
+    text-align: center;
 }
 
 nav#projects {
