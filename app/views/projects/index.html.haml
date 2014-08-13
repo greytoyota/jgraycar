@@ -1,13 +1,14 @@
-%h1 All Projects
-
 %nav#projects
   - @projects.each do |project|
     .link
       = link_to project.title, project
 
-- @projects.each do |project|
-  = render "show", project: project
+#project-content
+  %h1 All Projects
 
-- if user_signed_in?
-  .add-new
-    = link_to "Add Project", new_project_path
+  - @projects.each do |project|
+    = render "show", project: project
+
+  - if user_signed_in?
+    .add-new
+      = link_to "Add Project", new_project_path

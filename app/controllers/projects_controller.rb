@@ -26,6 +26,7 @@ class ProjectsController < ApplicationController
 
   # Give project whose ID or slug matches request.
   def show
+    @projects = Project.all
   end
 
   # Give project whose ID or slug matches request, to be used by form.
