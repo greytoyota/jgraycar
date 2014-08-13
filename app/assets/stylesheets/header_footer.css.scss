@@ -48,6 +48,8 @@ body.pages#contact #nav-bar .link#contact-page {
     text-align: center;
     .icons {
         img {
+            -webkit-transition: width .1s, height .1s; /* For Safari 3.1 to 6.0 */
+            transition: width .1s, height .1s;
             display: initial;
             width: 30px;
             height: 30px;
@@ -55,7 +57,8 @@ body.pages#contact #nav-bar .link#contact-page {
         }
         img:hover {
             position: relative;
-            top: -1px;
+            width: 33px;
+            height: 33px;
         }
     }
 }
