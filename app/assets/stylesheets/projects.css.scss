@@ -1,3 +1,26 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+nav#projects {
+    position: fixed;
+    left: 0px;
+    top: 43px;
+    height: 100%;
+    width: 200px;
+    background-color: $sub-color;
+    .link {
+        margin: 13px 0px;
+        padding: 0px 13px;
+        text-align: left;
+        a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        a:hover {
+            color: $sub-color-2;
+        }
+    }
+}

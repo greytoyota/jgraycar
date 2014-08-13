@@ -23,40 +23,10 @@ nav#nav-bar {
             text-decoration: none;
             color: white;
             font-size: 20px;
+            font-family: serif;
         }
         a:hover {
             color: gray;
-        }
-        ul {
-            position: absolute;
-            padding-left: 0px;
-            left: -9999px;
-            list-style-type: none;
-            li {
-                background-color: #383838;
-                border: 1px #222 solid;
-                border-top: none;
-                padding: 5px 10px;
-                float: none;
-                text-align: left;
-                a {
-                    color: white;
-                    font-size: 15px;
-                }
-            }
-        }
-        ul#projects-dropdown {
-            li {
-                width: 90px;
-            }
-        }
-    }
-    .link:hover {
-        ul {
-            z-index: 5;
-            margin-top: 10px;
-            margin-left: -10px;
-            left: auto;
         }
     }
 }

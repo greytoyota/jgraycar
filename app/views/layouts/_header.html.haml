@@ -4,11 +4,6 @@
 
   .link#performances-page
     = link_to "PROJECTS", projects_path
-    %ul#projects-dropdown
-      - projects = Project.all
-      - projects.each do |project|
-        %li
-          = link_to project.title, project
 
   .link#about-page
     = link_to "ABOUT", "/about"

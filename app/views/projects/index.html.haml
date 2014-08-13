@@ -1,5 +1,10 @@
 %h1 All Projects
 
+%nav#projects
+  - @projects.each do |project|
+    .link
+      = link_to project.title, project
+
 - @projects.each do |project|
   = render "show", project: project
 
