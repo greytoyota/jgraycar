@@ -1,3 +1,42 @@
 // Place all the styles related to the front_page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#happy_face {
+    position: relative;
+    width: 150px;
+    display: block;
+    margin: auto;
+    img {
+        position: relative;
+        width: 150px;
+        z-index: 1;
+    }
+    p {
+        position: absolute;
+        z-index: 0;
+        top: 60%;
+        left: 45px;
+    }
+}
+
+#happy_face:hover {
+    img {
+        filter: brightness(70%);
+        -webkit-filter: brightness(70%);
+    }
+    p {
+        z-index: 3;
+        color: white;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
