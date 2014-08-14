@@ -14,8 +14,9 @@
           = image_tag project.icon.url(:thumb)
 
       .back
-        :markdown
-          #{project.description}
+        .description
+          :markdown
+            #{project.description}
 
   - if user_signed_in?
     %section.edit-links

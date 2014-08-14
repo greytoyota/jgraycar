@@ -61,6 +61,14 @@ article.project {
         top: 0;
         bottom: 0;
     }
+    .description {
+        padding: 20px;
+        p {
+            font-size: 20px;
+            margin-top: 0px;
+            text-align: left;
+        }
+    }
 }
 
 .add-new {
@@ -119,6 +127,7 @@ article.project {
     position: absolute;
     top: 0;
     left: 0;
+    overflow: auto;
 }
 
 /* front pane, placed above back */
