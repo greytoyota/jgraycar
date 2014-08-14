@@ -1,17 +1,22 @@
 %article.project
-  - if project.link.length > 0
-    %h2(id="#{project.slug}")
-      = link_to project.title, project.link, target: "_blank"
-  - else
-    %h2(id="#{project.slug}")= project.title
+  .flip-container(ontouchstart="this.classList.toggle('hover');")
+    .flipper
+      .front
+        - if project.link.length > 0
+          %h2(id="#{project.slug}")
+            = link_to project.title, project.link, target: "_blank"
+        - else
+          %h2(id="#{project.slug}")= project.title
 
-  %small= project.year
+        %small= project.year
 
-  :markdown
-    #{project.description}
+        :markdown
+          #{project.description}
 
-  - if user_signed_in?
-    %section.edit-links
-      = link_to "Edit", edit_project_path(project)
-      = link_to "Delete", project_path(project), method: :delete,
-        data: { confirm: "Are you sure you want to delete project #{project.title}?" }
+        - if user_signed_in?
+          %section.edit-links
+            = link_to "Edit", edit_project_path(project)
+            = link_to "Delete", project_path(project), method: :delete,
+              data: { confirm: "Are you sure you want to delete project #{project.title}?" }
+      .back
+        %p ok
