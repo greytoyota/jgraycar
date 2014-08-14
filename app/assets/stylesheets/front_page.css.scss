@@ -12,7 +12,6 @@ img {
     position: relative;
     width: 150px;
     display: block;
-    margin: auto;
     img {
         position: relative;
         width: 150px;
@@ -44,9 +43,25 @@ img {
     }
 }
 
-.bubble-link#about-bubble:hover {
+#about-bubble {
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+#about-bubble:hover {
     img {
         filter: brightness(70%);
         -webkit-filter: brightness(70%);
+    }
+}
+
+#projects-contact-links {
+    width: 440px;
+    margin: auto;
+    #projects-bubble {
+        float: left;
+    }
+    #contact-bubble {
+        float: right;
     }
 }

@@ -5,8 +5,13 @@
   %p
     = link_to "About Me", "/about"
 
-#projects-contact
+#projects-contact-links
   .bubble-link#projects-bubble
     = link_to image_tag("projects.png"), projects_path
     %p
       = link_to "My Projects", projects_path
+
+  .bubble-link#contact-bubble
+    = link_to image_tag("contact.png"), "/contact"
+    %p
+      = link_to "Contact Me", "/contact"
