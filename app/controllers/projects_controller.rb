@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :authenticate_user!, :except => [:index]
   before_action :set_project, only: [:edit, :update, :destroy]
 
   # Create a blank project to be used by form.
