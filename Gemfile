@@ -41,6 +41,13 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Paperclip to attach images
+gem 'paperclip', '~> 4.2'
+# Paperclip requires cocaine
+gem 'cocaine', '~> 0.5.4'
+# Enable AWS support
+gem 'aws-sdk'
+
 # Use Device for authentification
 gem 'devise'
 

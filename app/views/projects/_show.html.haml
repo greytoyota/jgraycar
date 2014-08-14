@@ -3,13 +3,15 @@
   .flip-container(ontouchstart="this.classList.toggle('hover');")
     .flipper
       .front
-        - if project.link.length > 0
-          %h2
-            = link_to project.title, project.link, target: "_blank"
-        - else
-          %h2= project.title
+        .top-half
+          - if project.link.length > 0
+            %h2
+              = link_to project.title, project.link, target: "_blank"
+          - else
+            %h2= project.title
 
-        %small= project.year
+        .circle
+          = image_tag project.icon.url(:thumb)
 
       .back
         :markdown

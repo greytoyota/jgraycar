@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
 
   # Default method for projects. Gives all current projects and alumni.
   def index
-    @projects = Project.all
+    @projects = Project.all.order('title ASC, year')
   end
 
   # Give project whose ID or slug matches request.
@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
   # otherwise back to edit form.
   def update
     if @project.update(project_params)
-      redirect_to @project
+      redirect_to projects_path + "##{@project.slug}"
     else
       render 'edit'
     end
@@ -57,6 +57,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :link, :description, :year)
+    params.require(:project).permit(:title, :link, :description, :year, :icon,
+                                    :delete_icon)
   end
 end

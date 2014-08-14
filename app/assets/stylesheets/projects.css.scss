@@ -33,22 +33,39 @@ nav#projects {
 article.project {
     margin: 0px auto;
     width: 80%;
-    h2 a {
-        text-decoration: none;
-    }
-    h2 {
-        font-family: $main-font;
-    }
-    small {
-        display: block;
+    .top-half {
+        border-bottom: 1px black solid;
+        background-color: $sub-color-3;
+        height: 50%;
+        h2 a {
+            text-decoration: none;
+        }
+        h2 {
+            font-family: $main-font;
+            margin-top: 0px;
+            padding-top: 20px;
+        }
+        small {
+            display: block;
+            margin-top: 25px;
+        }
     }
     section.edit-links {
         text-align: center;
+    }
+    .circle {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
     }
 }
 
 .add-new {
     text-align: center;
+    margin-top: 60px;
 }
 
 .circle {
@@ -70,6 +87,7 @@ article.project {
         left: $circle-size / -4;
         top: $circle-size / -4;
         width: $circle-size;
+        height: $circle-size;
         z-index: 1;
     }
 }
@@ -97,7 +115,6 @@ article.project {
 
 /* hide back of pane during swap */
 .front, .back {
-    //padding: 20px;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -112,7 +129,7 @@ article.project {
 
 /* back, initially hidden pane */
 .back {
-    background-color: $sub-color-2;
+    background-color: $sub-color-3;
     transform: rotateY(180deg);
 }
 
