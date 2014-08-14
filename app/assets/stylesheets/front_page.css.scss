@@ -8,7 +8,7 @@ img {
     margin: auto;
 }
 
-#happy_face {
+.bubble-link {
     position: relative;
     width: 150px;
     display: block;
@@ -20,16 +20,19 @@ img {
     }
     p {
         position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
         z-index: 0;
-        top: 60%;
-        left: 45px;
+        top: 30%;
     }
 }
 
-#happy_face:hover {
+.bubble-link:hover {
     img {
-        filter: brightness(70%);
-        -webkit-filter: brightness(70%);
+        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
     }
     p {
         z-index: 3;
@@ -38,5 +41,12 @@ img {
             color: white;
             text-decoration: none;
         }
+    }
+}
+
+.bubble-link#about-bubble:hover {
+    img {
+        filter: brightness(70%);
+        -webkit-filter: brightness(70%);
     }
 }
