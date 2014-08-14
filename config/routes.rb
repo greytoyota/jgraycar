@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
 
-  resources :projects
+  resources :projects, :except => [:show]
 
   devise_for :users
   devise_scope :user do

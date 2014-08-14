@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, :except => [:show, :index]
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:edit, :update, :destroy]
 
   # Create a blank project to be used by form.
   def new
@@ -22,11 +22,6 @@ class ProjectsController < ApplicationController
   # Default method for projects. Gives all current projects and alumni.
   def index
     @projects = Project.all.order('title ASC, year')
-  end
-
-  # Give project whose ID or slug matches request.
-  def show
-    @projects = Project.all
   end
 
   # Give project whose ID or slug matches request, to be used by form.
