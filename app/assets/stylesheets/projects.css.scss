@@ -3,33 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 
-#project-content {
-    margin-left: $project-nav-width;
-}
-
-article.project {
-    margin: 0px auto 50px auto;
-    width: 80%;
-    padding: 20px;
-    h2 a {
-        text-decoration: none;
-    }
-    h2 {
-        margin: 0px auto;
-        font-family: $main-font;
-    }
-    small {
-        display: block;
-    }
-    section.edit-links {
-        text-align: center;
-    }
-}
-
-.add-new {
-    text-align: center;
-}
-
 nav#projects {
     position: fixed;
     left: 0px;
@@ -50,6 +23,32 @@ nav#projects {
             color: $sub-color-2;
         }
     }
+}
+
+#project-content {
+    margin-left: $project-nav-width;
+    margin-bottom: 180px;
+}
+
+article.project {
+    margin: 0px auto;
+    width: 80%;
+    h2 a {
+        text-decoration: none;
+    }
+    h2 {
+        font-family: $main-font;
+    }
+    small {
+        display: block;
+    }
+    section.edit-links {
+        text-align: center;
+    }
+}
+
+.add-new {
+    text-align: center;
 }
 
 .circle {
@@ -98,6 +97,7 @@ nav#projects {
 
 /* hide back of pane during swap */
 .front, .back {
+    //padding: 20px;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -106,12 +106,16 @@ nav#projects {
 
 /* front pane, placed above back */
 .front {
-    background-color: $sub-color-2;
+    border: 1px black solid;
     z-index: 2;
 }
 
 /* back, initially hidden pane */
 .back {
+    background-color: $sub-color-2;
     transform: rotateY(180deg);
-    border: 1px black solid;
+}
+
+.spacer {
+    height: 80px;
 }

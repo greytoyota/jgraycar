@@ -4,8 +4,6 @@
       = link_to project.title, "##{project.slug}"
 
 #project-content
-  %h1 All Projects
-
   - @projects.each do |project|
     = render "show", project: project
 

@@ -1,22 +1,22 @@
 %article.project
+  .spacer(id="#{project.slug}")
   .flip-container(ontouchstart="this.classList.toggle('hover');")
     .flipper
       .front
         - if project.link.length > 0
-          %h2(id="#{project.slug}")
+          %h2
             = link_to project.title, project.link, target: "_blank"
         - else
-          %h2(id="#{project.slug}")= project.title
+          %h2= project.title
 
         %small= project.year
 
+      .back
         :markdown
           #{project.description}
 
-        - if user_signed_in?
-          %section.edit-links
-            = link_to "Edit", edit_project_path(project)
-            = link_to "Delete", project_path(project), method: :delete,
-              data: { confirm: "Are you sure you want to delete project #{project.title}?" }
-      .back
-        %p ok
+  - if user_signed_in?
+    %section.edit-links
+      = link_to "Edit", edit_project_path(project)
+      = link_to "Delete", project_path(project), method: :delete,
+        data: { confirm: "Are you sure you want to delete project #{project.title}?" }
