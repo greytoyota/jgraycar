@@ -30,8 +30,10 @@ img {
 
 .bubble-link:hover {
     img {
-        filter: brightness(50%);
         -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+        filter: brightness(50%);
     }
     p {
         z-index: 3;
