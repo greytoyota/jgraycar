@@ -52,6 +52,11 @@ article.project {
     }
     section.edit-links {
         text-align: center;
+        margin-top: 10px;
+        img {
+            width: 25px;
+            height: 25px;
+        }
     }
     .circle {
         position: absolute;
@@ -74,6 +79,10 @@ article.project {
 .add-new {
     text-align: center;
     margin-top: 60px;
+    img {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 .circle {
