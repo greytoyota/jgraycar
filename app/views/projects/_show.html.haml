@@ -14,7 +14,7 @@
   - if project.code_links.length > 0
     %h2 Cool Code
     - project.code_links.each do |code_link|
-      %p= code_link.title
+      %h4(class="code-link")= code_link.title
       .gist(data-src="#{code_link.link}.json")
 
   - if user_signed_in?

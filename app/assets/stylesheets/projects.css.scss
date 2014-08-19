@@ -76,3 +76,12 @@ article.project {
         }
     }
 }
+
+h4.code-link {
+    margin-bottom: 10px;
+    font-family: $main-font;
+}
+
+h4.code-link:not(:first-child) {
+    margin-top: 30px;
+}
