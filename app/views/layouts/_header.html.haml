@@ -6,7 +6,7 @@
     %ul
       - projects.each do |project|
         %li
-          = link_to project.title, "/projects##{project.slug}"
+          = link_to project.title, project
 
   .link#about-page
     = link_to "ABOUT", "/about", class: "main-link"

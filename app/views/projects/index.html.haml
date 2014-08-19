@@ -1,7 +1,7 @@
 #project-content
   - @projects.each do |project|
-    = render "show", project: project
+    = render "bubble", project: project
 
-  - if user_signed_in?
-    .add-new
-      = link_to image_tag("icons/add.png"), new_project_path
+- if user_signed_in?
+  .add-new
+    = link_to image_tag("icons/add.png"), new_project_path

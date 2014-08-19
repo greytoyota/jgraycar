@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, :except => [:index]
-  before_action :set_project, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
+
+  def show
+  end
 
   # Create a blank project to be used by form.
   def new
@@ -53,6 +56,7 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:title, :link, :description, :year, :icon,
-                                    :delete_icon)
+                                    :delete_icon, code_links_attributes: [:title, :link,
+                                                                          :id, :_destroy])
   end
 end

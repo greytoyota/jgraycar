@@ -5,12 +5,16 @@
   - else
     %h2(id="#{project.slug}")= project.title
 
-  .circle
-    = image_tag project.icon.url(:thumb)
-
   .description
     :markdown
       #{project.description}
+
+  = image_tag project.icon.url(:display), class: "project-pic"
+
+  %h2 Cool Code
+  - project.code_links.each do |code_link|
+    %p= code_link.title
+    %script(src="#{code_link.link}.js")
 
   - if user_signed_in?
     %section.edit-icons

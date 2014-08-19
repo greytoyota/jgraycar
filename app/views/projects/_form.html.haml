@@ -11,4 +11,11 @@
   = f.input :icon
   = f.input :delete_icon, as: :boolean
 
+  %h1 Code Links
+  #code_links
+    = f.simple_fields_for :code_links do |code_link|
+      = render "code_link_fields", f: code_link
+    .links
+      = link_to_add_association "Add Code Link", f, :code_links
+
   = f.button :submit
