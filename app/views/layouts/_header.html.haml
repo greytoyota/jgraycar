@@ -1,17 +1,19 @@
-= image_tag("logo.svg")
+= link_to image_tag("logo.svg"), root_url
 %nav#nav-bar
-  .link#home-page
-    = link_to "HOME", root_url
-
   .link#projects-page
-    = link_to "PROJECTS", projects_path
+    = link_to "PROJECTS", projects_path, class: "main-link"
+    - projects = Project.all.order('title ASC, year')
+    %ul
+      - projects.each do |project|
+        %li
+          = link_to project.title, "/projects##{project.slug}"
 
   .link#about-page
-    = link_to "ABOUT", "/about"
+    = link_to "ABOUT", "/about", class: "main-link"
 
   .link#contact-page
-    = link_to "CONTACT", "/contact"
+    = link_to "CONTACT", "/contact", class: "main-link"
 
   - if user_signed_in?
     .link
-      = link_to "LOGOUT", "/logout", "data-no-turbolink" => true
+      = link_to "LOGOUT", "/logout", "data-no-turbolink" => true, class: "main-link"

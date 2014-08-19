@@ -1,1 +1,27 @@
-$navbar-width: 600px;
+@font-face {
+  font-family: 'Novecento';
+  src: font-url('Novecento/Novecento.eot');
+  src: font-url('Novecento/Novecento.eot?#iefix') format('embedded-opentype'),
+  font-url('Novecento/Novecento.svg#Novecento') format('svg'),
+  font-url('Novecento/Novecento.woff') format('woff'),
+  font-url('Novecento/Novecento.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Novecento-Bold';
+  src: font-url('Novecento-Bold/Novecento-Bold.eot');
+  src: font-url('Novecento-Bold/Novecento-Bold.eot?#iefix') format('embedded-opentype'),
+  font-url('Novecento-Bold/Novecento-Bold.svg#Novecento-Bold') format('svg'),
+  font-url('Novecento-Bold/Novecento-Bold.woff') format('woff'),
+  font-url('Novecento-Bold/Novecento-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$navbar-width: 480px;
+$main-font: 'Novecento';
+$navbar-font: 'Novecento';
+$navbar-bold-font: 'Novecento-Bold';
+$logo-color: #C91901;
