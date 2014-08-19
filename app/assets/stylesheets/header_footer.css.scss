@@ -23,10 +23,12 @@ header#nav-header {
         padding-left: 25px;
         li {
             a {
+                font-family: $main-font;
                 font-size: 20px;
+                font-weight: 600;
             }
             a:hover {
-                color: blue;
+                color: #03507E;
             }
         }
     }
@@ -37,7 +39,6 @@ body.pages#contact #nav-bar .link#contact-page,
 body.projects #nav-bar .link#projects-page {
     a.main-link {
         color: $logo-color;
-        // Should use bold font instead here
         font-family: $navbar-bold-font;
     }
 }

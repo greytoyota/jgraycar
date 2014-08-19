@@ -1,7 +1,7 @@
 %article.project
   - if project.link.length > 0
     %h2(id="#{project.slug}")
-      = link_to project.title, project.link, target: "_blank"
+      = link_to project.title, project.link, target: "_blank", class: "header-link"
   - else
     %h2(id="#{project.slug}")= project.title
 

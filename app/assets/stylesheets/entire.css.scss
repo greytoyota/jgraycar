@@ -3,6 +3,16 @@
 #page-wrapper {
     margin-left: $navbar-width;
     width: 800px;
+    margin-top: 40px;
+    * {
+        font-family: $main-font;
+    }
+}
+
+body.projects {
+    #page-wrapper {
+        margin-top: 0px;
+    }
 }
 
 body {
