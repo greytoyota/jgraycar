@@ -9,12 +9,13 @@
     :markdown
       #{project.description}
 
-  = image_tag project.icon.url(:display), class: "project-pic"
+  = image_tag project.icon.url(:original), class: "project-pic"
 
-  %h2 Cool Code
-  - project.code_links.each do |code_link|
-    %p= code_link.title
-    %script(src="#{code_link.link}.js")
+  - if project.code_links.length > 0
+    %h2 Cool Code
+    - project.code_links.each do |code_link|
+      %p= code_link.title
+      .gist(data-src="#{code_link.link}.json")
 
   - if user_signed_in?
     %section.edit-icons

@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
     attachment.instance.slug
   end
 
-  has_attached_file :icon, :styles => { display: "500x800", thumb: "200x200#" },
+  has_attached_file :icon, :styles => { thumb: "200x200#" },
   path: "/projects/:slug/:attachment/:style/:filename",
   url: "/projects/:slug/:attachment/:style/:filename",
   default_url: "/images/projects/:attachment/:style/missing.png"

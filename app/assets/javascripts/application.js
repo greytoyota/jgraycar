@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require google_analytics
+//= require gists
 //= require cocoon
 //= require_tree .
