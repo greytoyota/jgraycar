@@ -4,4 +4,5 @@
       %li
         = render "courses/show", course: course
 
-= link_to "Add Course", new_course_path
+- if user_signed_in?
+  = link_to "Add Course", new_course_path
