@@ -9,3 +9,36 @@ section#email {
 	vertical-align: top;
     }
 }
+
+section#courses {
+    padding-right: 20px;
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    h1 {
+	margin-bottom: 10px;
+    }
+    ul {
+	margin-top: 0px;
+	list-style-type: none;
+	padding-left: 0px;
+	li {
+	    margin: 15px auto;
+	    article.course {
+		font-size: 17px;
+		a {
+		    text-decoration: none;
+		}
+		a:hover {
+		    color: $blue;
+		}
+	    }
+	}
+    }
+}
+
+section#work-exp {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}

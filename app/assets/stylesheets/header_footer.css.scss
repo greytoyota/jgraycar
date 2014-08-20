@@ -29,7 +29,7 @@ header#nav-header {
                 font-weight: 600;
             }
             a:hover {
-                color: #03507E;
+                color: $blue;
             }
         }
     }
@@ -41,9 +41,10 @@ body.projects #nav-bar ul {
 
 body.pages#about #nav-bar .link#about-page,
 body.pages#contact #nav-bar .link#contact-page,
+body.courses #nav-bar .link#courses-page,
 body.projects #nav-bar .link#projects-page {
     a.main-link {
-        color: $logo-color;
+        color: $red;
         font-family: $navbar-bold-font;
     }
 }

@@ -1,0 +1,7 @@
+%section.courses-feed
+  %ul
+    - courses.each do |course|
+      %li
+        = render "courses/show", course: course
+
+= link_to "Add Course", new_course_path

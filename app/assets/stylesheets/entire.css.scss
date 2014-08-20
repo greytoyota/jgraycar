@@ -16,3 +16,35 @@ body {
 * {
     color: $main-font-color;
 }
+
+form {
+    .input {
+	margin-bottom: 20px;
+	abbr {
+	    vertical-align: top;
+	}
+	label {
+	    vertical-align: top;
+	    margin-right: 10px;
+	}
+	input {
+	    width: 300px;
+	}
+	textarea {
+	    width: 600px;
+	    height: 200px;
+	}
+    }
+    #code_links {
+	margin: 50px auto;
+    }
+    .nested-fields {
+	display: inline-block;
+	border: 1px black solid;
+	width: 44%;
+	padding: 20px;
+	padding-right: 0px;
+	margin-bottom: 30px;
+	margin-right: 20px;
+    }
+}
