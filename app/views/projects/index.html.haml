@@ -1,3 +1,10 @@
+- title = "My Projects"
+- description = "Get a quick glance at a few of the projects I've worked on."
+- image = URI.join(root_url, image_path("logo.png"))
+
+- meta title: title, description: description,
+  og: { title: title, description: description, image: image, url: request.original_url }
+
 #project-content
   - @projects.each do |project|
     = render "bubble", project: project

@@ -1,1 +1,8 @@
+- title = "#{@project.title} | My Projects"
+- description = @project.description.length > 100 ? "#{@project.description[0..100]}..." : @project.description
+- image = @project.icon.url(:original)
+
+- meta title: title, description: description,
+  og: { title: title, description: description, image: image, url: request.original_url }
+
 = render "show", project: @project

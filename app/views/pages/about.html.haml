@@ -1,3 +1,10 @@
+- title = "About Me"
+- description = "See more detailed information on my background and experience."
+- image = URI.join(root_url, image_path("logo.png"))
+
+- meta title: title, description: description,
+  og: { title: title, description: description, image: image, url: request.original_url }
+
 %h1 About Me
 
 %section.about-text
