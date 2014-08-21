@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     get "logout",   :to => "devise/sessions#destroy"
     # MUST BE REMOVED BEFORE DISTRIBUTING; there should be no way to register new users
     # Included purely for testing reasons
-    get "register", to: "devise/registrations#new"
+    # get "register", to: "devise/registrations#new"
   end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
