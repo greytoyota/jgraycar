@@ -12,14 +12,20 @@ Rails.application.routes.draw do
   resources :projects
   resources :code_links
 
-  devise_for :users
+  # Use RegistrationsController if in production mode, disabling new users from signing up
+  if Rails.env.production?
+    devise_for :users, controllers: { registrations: "registrations" }
+  else
+    devise_for :users
+  end
+
   devise_scope :user do
     get "login", :to => "devise/sessions#new"
     get "settings", :to => "devise/registrations#edit"
     get "logout",   :to => "devise/sessions#destroy"
     # MUST BE REMOVED BEFORE DISTRIBUTING; there should be no way to register new users
     # Included purely for testing reasons
-    # get "register", to: "devise/registrations#new"
+    get "register", to: "devise/registrations#new"
   end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
