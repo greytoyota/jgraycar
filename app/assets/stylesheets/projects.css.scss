@@ -1,6 +1,7 @@
 @import "variables";
 
 .edit-icons {
+    display: inline-block;
     img {
         width: 20px;
         height: 20px;
@@ -18,6 +19,9 @@
 }
 
 article.project {
+    .title {
+	display: inline;
+    }
     h2:not(:first-child) {
         margin-top: 40px;
     }
