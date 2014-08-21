@@ -65,7 +65,7 @@ article.project {
         }
     }
     .bubble:hover {
-        background-color: black;
+        background-color: $main-font-color;
         img {
 	    filter: alpha(opacity=40);
             opacity: .6;
