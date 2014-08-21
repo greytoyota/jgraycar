@@ -1,12 +1,34 @@
 @import "variables";
 
-section#email {
-    img {
-	width: 30px;
-	height: 30px;
-    }
+section#contact-text {
     a {
-	vertical-align: top;
+	color: $red;
+	text-decoration: none;
+    }
+}
+
+nav.icons {
+    margin-top: 40px;
+    text-align: center;
+    img {
+	margin: auto 20px;
+	width: 100px;
+	height: 100px;
+        -webkit-transition: width .1s, height .1s; /* For Safari 3.1 to 6.0 */
+        transition: width .1s, height .1s;
+        vertical-align: top;
+    }
+    img:hover {
+        position: relative;
+        width: 110px;
+        height: 110px;
+    }
+}
+
+section#about-text {
+    a {
+	color: $red;
+	text-decoration: none;
     }
 }
 
@@ -25,7 +47,7 @@ section#courses {
 	li {
 	    margin: 15px auto;
 	    article.course {
-		font-size: 17px;
+		font-size: 100%;
 		a {
 		    text-decoration: none;
 		}

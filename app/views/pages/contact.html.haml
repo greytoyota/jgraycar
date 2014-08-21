@@ -1,5 +1,13 @@
 %h1 Contact Me
 
-%section#email
-  = link_to image_tag("icons/email.png"), "mailto:j.cx.graycar@gmail.com"
-  %a(href="mailto:j.cx.graycar@gmail.com") j.cx.graycar@gmail.com
+%section#contact-text
+  :markdown
+    Feel free to message me at [jgraycar@berkeley.edu](mailto:jgraycar@berkeley.edu), and I'll be sure to get back to you as soon as possible!
+
+%nav.icons
+  = link_to image_tag("icons/github.png"),
+    "https://www.github.com/greytoyota", :target => "_blank"
+  = link_to image_tag("icons/google_plus.png"),
+    "https://plus.google.com/+JoelGraycar/posts", :target => "_blank"
+  = link_to image_tag("icons/linkedin.png"),
+    "http://www.linkedin.com/in/jgraycar", :target => "_blank"
