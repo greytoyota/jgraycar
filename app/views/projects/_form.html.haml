@@ -11,7 +11,7 @@
   = f.input :icon
   = f.input :delete_icon, as: :boolean
 
-  %h1 Code Links
+  %h2 Code Links
   #code_links
     = f.simple_fields_for :code_links do |code_link|
       = render "code_link_fields", f: code_link

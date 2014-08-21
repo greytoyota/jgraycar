@@ -1,24 +1,26 @@
 %article.project
   - if project.link.length > 0
-    %h2(id="#{project.slug}")
+    %h2.title
       = link_to project.title, project.link, target: "_blank", class: "header-link"
   - else
-    %h2(id="#{project.slug}")= project.title
-
-  .description
-    :markdown
-      #{project.description}
-
-  = image_tag project.icon.url(:original), class: "project-pic"
-
-  - if project.code_links.length > 0
-    %h2 Cool Code
-    - project.code_links.each do |code_link|
-      %h4(class="code-link")= code_link.title
-      .gist(data-src="#{code_link.link}.json")
+    %h2.title= project.title
 
   - if user_signed_in?
     %section.edit-icons
       = link_to image_tag("icons/edit.png"), edit_project_path(project)
       = link_to image_tag("icons/delete.png"), project_path(project), method: :delete,
         data: { confirm: "Are you sure you want to delete project #{project.title}?" }
+
+  .description
+    :markdown
+      #{project.description}
+
+  .project-pic
+    = link_to image_tag(project.icon.url(:original)), project.link,
+      target: "_blank", class: "project-pic"
+
+  - if project.code_links.length > 0
+    %h2 Cool Code
+    - project.code_links.each do |code_link|
+      %h4(class="code-link")= code_link.title
+      .gist(data-src="#{code_link.link}.json")

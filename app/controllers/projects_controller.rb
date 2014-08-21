@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
  
     if @project.save
-      redirect_to projects_path + "##{@project.slug}"
+      redirect_to @project
     else
       render 'new'
     end
@@ -36,7 +36,7 @@ class ProjectsController < ApplicationController
   # otherwise back to edit form.
   def update
     if @project.update(project_params)
-      redirect_to projects_path + "##{@project.slug}"
+      redirect_to @project
     else
       render 'edit'
     end

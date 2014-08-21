@@ -1,0 +1,66 @@
+@import "variables";
+
+section#contact-text {
+    a {
+	color: $red;
+	text-decoration: none;
+    }
+}
+
+nav.icons {
+    margin-top: 40px;
+    text-align: center;
+    img {
+	margin: auto 20px;
+	width: 100px;
+	height: 100px;
+        -webkit-transition: width .1s, height .1s; /* For Safari 3.1 to 6.0 */
+        transition: width .1s, height .1s;
+        vertical-align: top;
+    }
+    img:hover {
+        position: relative;
+        width: 110px;
+        height: 110px;
+    }
+}
+
+section.about-text {
+    a {
+	color: $red;
+	text-decoration: none;
+    }
+}
+
+section#courses {
+    padding-right: 20px;
+    width: 47%;
+    display: inline-block;
+    vertical-align: top;
+    h1 {
+	margin-bottom: 10px;
+    }
+    ul {
+	margin-top: 0px;
+	list-style-type: none;
+	padding-left: 0px;
+	li {
+	    margin: 15px auto;
+	    article.course {
+		font-size: 100%;
+		a {
+		    text-decoration: none;
+		}
+		a:hover {
+		    color: $blue;
+		}
+	    }
+	}
+    }
+}
+
+section#work-exp {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}

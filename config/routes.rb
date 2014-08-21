@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :courses
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,7 +12,13 @@ Rails.application.routes.draw do
   resources :projects
   resources :code_links
 
-  devise_for :users
+  # Use RegistrationsController if in production mode, disabling new users from signing up
+  if Rails.env.production?
+    devise_for :users, controllers: { registrations: "registrations" }
+  else
+    devise_for :users
+  end
+
   devise_scope :user do
     get "login", :to => "devise/sessions#new"
     get "settings", :to => "devise/registrations#edit"

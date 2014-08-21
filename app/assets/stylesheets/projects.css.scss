@@ -1,6 +1,7 @@
 @import "variables";
 
 .edit-icons {
+    display: inline-block;
     img {
         width: 20px;
         height: 20px;
@@ -18,15 +19,18 @@
 }
 
 article.project {
+    .title {
+	display: inline;
+    }
     h2:not(:first-child) {
         margin-top: 40px;
     }
     a.header-link {
         text-decoration: none;
     }
-    img.project-pic {
-        display: block;
-        margin: auto;
+    .project-pic {
+        margin: 30px auto;
+	text-align: center;
     }
 }
 
