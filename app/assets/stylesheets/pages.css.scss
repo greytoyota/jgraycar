@@ -32,16 +32,6 @@ section#courses {
 	padding-left: 0px;
 	li {
 	    margin: 15px auto;
-	    article.course {
-		font-size: 100%;
-		a {
-                    color: $main-font-color;
-		    text-decoration: none;
-		}
-		a:hover {
-		    color: $blue;
-		}
-	    }
 	}
     }
 }

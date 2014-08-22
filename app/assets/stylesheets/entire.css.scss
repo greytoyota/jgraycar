@@ -6,6 +6,10 @@ a {
     font-weight: bold;
 }
 
+a:hover {
+    color: $blue;
+}
+
 #page-wrapper {
     position: relative;
     margin-left: $navbar-width;

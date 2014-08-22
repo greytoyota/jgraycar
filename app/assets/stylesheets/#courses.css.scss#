@@ -9,9 +9,6 @@ article.course {
         color: $main-font-color;
         font-weight: normal;
     }
-    /* a:hover { */
-    /*     color: $blue; */
-    /* } */
 }
 
 article.course:hover {
