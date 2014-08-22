@@ -35,6 +35,7 @@ section#courses {
 	    article.course {
 		font-size: 100%;
 		a {
+                    color: $main-font-color;
 		    text-decoration: none;
 		}
 		a:hover {
