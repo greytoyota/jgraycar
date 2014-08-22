@@ -5,17 +5,26 @@
 
 article.course {
     font-size: 100%;
+    display: inline;
     a.description {
         color: $main-font-color;
         font-weight: normal;
     }
-    /* a:hover { */
-    /*     color: $blue; */
-    /* } */
 }
 
 article.course:hover {
     a {
         color: $blue;
+    }
+}
+
+section.courses-feed {
+    ul {
+	margin-top: 0px;
+	list-style-type: none;
+	padding-left: 0px;
+	li {
+	    margin: 15px auto;
+	}
     }
 }

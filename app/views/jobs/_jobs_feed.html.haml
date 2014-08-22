@@ -1,0 +1,8 @@
+%section.jobs-feed
+  %ul
+    - jobs.each do |job|
+      %li
+        = render "jobs/show", job: job
+
+- if user_signed_in?
+  = link_to "Add Job", new_job_path

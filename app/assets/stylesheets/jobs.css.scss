@@ -1,0 +1,33 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+section.jobs-feed {
+    ul {
+        margin-top: 0px;
+        list-style-type: none;
+        padding-left: 0px;
+        li {
+            margin: 15px auto;
+        }
+    }
+}
+
+article.job {
+    display: inline;
+    font-size: 100%;
+    strong {
+        font-family: 'Open Sans';
+        color: $red;
+    }
+    p {
+        display: inline;
+    }
+}
+
+section.index {
+    ul li {
+        margin-bottom: 50px;
+    }
+}

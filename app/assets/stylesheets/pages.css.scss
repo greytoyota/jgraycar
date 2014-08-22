@@ -26,18 +26,13 @@ section#courses {
     h1 {
 	margin-bottom: 10px;
     }
-    ul {
-	margin-top: 0px;
-	list-style-type: none;
-	padding-left: 0px;
-	li {
-	    margin: 15px auto;
-	}
-    }
 }
 
 section#work-exp {
     width: 49%;
     display: inline-block;
     vertical-align: top;
+    h1 {
+        margin-bottom: 10px;
+    }
 }

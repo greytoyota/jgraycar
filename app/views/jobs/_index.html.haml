@@ -1,0 +1,10 @@
+%section.jobs-feed.index
+  %ul
+    - jobs.each do |job|
+      %li
+        = render "jobs/show", job: job
+        %p= job.description
+        = render "jobs/edit_icons", job: job
+
+- if user_signed_in?
+  = link_to "Add Job", new_job_path
