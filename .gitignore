@@ -22,3 +22,5 @@
 
 # Ignore text editor generated temp files
 *~
+#*
+.#*
