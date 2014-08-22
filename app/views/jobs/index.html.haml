@@ -1,1 +1,10 @@
+- title = "Work Experience"
+- description = "View my past work experience and positions."
+- image = URI.join(root_url, image_path("favicon.png"))
+
+- meta title: title, description: description,
+  og: { title: title, description: description, image: image, url: request.original_url }
+
+%h1 Resume
+
 = render "index", jobs: @jobs
