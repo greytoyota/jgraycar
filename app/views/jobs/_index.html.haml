@@ -3,7 +3,9 @@
     - jobs.each do |job|
       %li
         = render "jobs/show", job: job
-        %p= job.description
+        .description
+          :markdown
+            #{job.description}
         = render "jobs/edit_icons", job: job
 
 - if user_signed_in?

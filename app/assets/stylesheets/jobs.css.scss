@@ -29,5 +29,21 @@ article.job {
 section.index {
     ul li {
         margin-bottom: 50px;
+        p {
+            font-weight: bold;
+        }
+    }
+    .description {
+        p {
+            font-weight: normal;
+        }
+        ul {
+            list-style-type: circle;
+            padding-left: 20px;
+            li {
+                margin: 10px auto;
+                font-family: $main-font;
+            }
+        }
     }
 }
