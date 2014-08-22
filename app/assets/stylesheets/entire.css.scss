@@ -1,5 +1,11 @@
 @import "variables";
 
+a {
+    color: $red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 #page-wrapper {
     position: relative;
     margin-left: $navbar-width;
