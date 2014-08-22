@@ -1,4 +1,7 @@
 %article.job
   %strong= "#{job.location} - "
   %p= job.title
-  %p= "(#{job.start_date} - #{job.end_date})"
+  - job_dates = "(#{job.start_date})"
+  - if job.end_date.length > 0
+    - job_dates = "(#{job.start_date} - #{job.end_date})"
+  %p= job_dates
