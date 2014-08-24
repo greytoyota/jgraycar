@@ -1,7 +1,5 @@
 %article.job
-  %strong= "#{job.location} - "
+  :markdown
+    **#{job.location} -**
   %p= job.title
-  - job_dates = "(#{job.start_date})"
-  - if job.end_date.length > 0
-    - job_dates = "(#{job.start_date} - #{job.end_date})"
-  %p= job_dates
+  %p= job.end_date.length > 0 ? "(#{job.start_date})" : "(#{job.start_date} - #{job.end_date})"
