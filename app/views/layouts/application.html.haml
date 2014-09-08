@@ -19,17 +19,12 @@
   %body{ class: "#{controller.controller_name}", id: "#{controller.action_name}" }
     %header#nav-header
       = render "layouts/header"
-    #page-wrapper
-      #content-wrapper
 
-        .devise-notice
-          - if notice
-            %p.alert-success= notice
-          - if alert
-            %p.alert-danger= alert
+    .devise-notice
+      - if notice
+        %p.alert-success= notice
+      - if alert
+        %p.alert-danger= alert
 
-        #page-content
-          = yield
+    = yield
 
-      %footer#external-links
-        = render "layouts/footer"    

@@ -6,11 +6,13 @@
   description: description,
   og: { title: title, description: description, image: image, url: root_url }
 
-%h1 Welcome!
+.left
+  %h1 Welcome!
 
-#intro
-  :markdown
-    I am Joel Graycar, a third-year Computer Science major at the University of California, Berkeley. Please feel free to browse through a few of the projects I have worked on, and to contact me at [jgraycar@berkeley.edu](jgraycar@berkeley.edu) with any questions or inquiries.
+  #intro
+    :markdown
+      I am Joel Graycar, a third-year Computer Science major at the University of California, Berkeley. Please feel free to browse through a few of the projects I have worked on, and to contact me at [jgraycar@berkeley.edu](jgraycar@berkeley.edu) with any questions or inquiries.
 
-#pic-of-me
-  = image_tag("front-page-me.jpg")
+.right
+  #pic-of-me
+    = image_tag("front-page-me.jpg")

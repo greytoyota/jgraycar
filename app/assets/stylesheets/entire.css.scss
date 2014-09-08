@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+
+.left {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: $light-gray;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding: 20px;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    background-color: $off-dark-gray;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+body {
+    margin: 0px;
+    background-color: $light-gray;
+}
