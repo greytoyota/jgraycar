@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+section.courses-feed {
+    ul {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+    article.course {
+        a.course-link {
+            text-decoration: none;
+            color: black;
+            font-size: 100%;
+        }
+        section.description {
+            padding-left: 7%;
+        }
+    }
+}

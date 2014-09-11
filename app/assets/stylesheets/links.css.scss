@@ -1,0 +1,8 @@
+@import "variables";
+@import "mixins";
+
+a {
+    color: $red;
+    font-family: $main-font;
+    text-decoration: none;
+}

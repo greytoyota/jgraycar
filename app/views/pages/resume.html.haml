@@ -10,6 +10,10 @@
 
   = render "jobs/jobs_feed", jobs: @jobs
 
+  %section#courses
+    %h1 Courses
+    = render "courses/courses_feed", courses: @courses
+
 .right
   %section.blokk-filler
     :markdown

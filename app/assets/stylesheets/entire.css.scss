@@ -45,4 +45,7 @@ body {
     margin: 0px;
     background-color: $light-gray;
     height: 100%;
+    * {
+        -webkit-font-smoothing: antialiased;
+    }
 }
