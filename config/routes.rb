@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
-  get 'resume' => 'jobs#index'
+  get 'resume' => 'pages#resume'
 
   resources :jobs
   resources :courses

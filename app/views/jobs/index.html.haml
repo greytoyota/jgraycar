@@ -5,8 +5,10 @@
 - meta title: title, description: description,
   og: { title: title, description: description, image: image, url: request.original_url }
 
-%h1 Resume
+.left
+  %h1 Work Experience
 
-= link_to "Download PDF", "/resume.pdf", id: "resume-link"
+  = render "jobs/jobs_feed", jobs: @jobs
 
-= render "index", jobs: @jobs
+.right
+  = link_to "Download PDF", "/resume.pdf", id: "resume-link"
