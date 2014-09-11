@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+
+section.code-snippets {
+    #snippets-header {
+        color: $green;
+        font-size: 160%;
+        word-spacing: 7px;
+    }
+}

@@ -5,4 +5,10 @@
 - meta title: title, description: description,
   og: { title: title, description: description, image: image, url: request.original_url }
 
-= render "show", project: @project
+.left
+  = render "show", project: @project
+
+.right
+  %section.code-snippets
+    %h2#snippets-header // Code Snippet
+    %section.snippet-content

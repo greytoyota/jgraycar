@@ -20,7 +20,7 @@
       target: "_blank", class: "project-pic"
 
   - if project.code_links.length > 0
-    %h2 Cool Code
+    %h2 Code Snippets
     - project.code_links.each do |code_link|
       %h4(class="code-link")= code_link.title
       .gist(data-src="#{code_link.link}.json")
