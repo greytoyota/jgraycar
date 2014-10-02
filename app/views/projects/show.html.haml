@@ -9,6 +9,4 @@
   = render "show", project: @project
 
 .right
-  %section.code-snippets
-    %h2#snippets-header // Code Snippet
-    %section.snippet-content
+  = render "code_snippets", project: @project

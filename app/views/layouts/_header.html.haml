@@ -7,6 +7,9 @@
       - projects.each do |project|
         %li
           = link_to project.title, project
+      - if user_signed_in?
+        %li
+          = link_to "Add Project", new_project_path
 
   - if user_signed_in?
     .link#courses-page

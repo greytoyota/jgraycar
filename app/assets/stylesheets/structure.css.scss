@@ -30,7 +30,7 @@
 
 .right {
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     background-color: $right-bg;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
