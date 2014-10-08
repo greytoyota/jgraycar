@@ -5,10 +5,13 @@
 - meta title: title, description: description,
   og: { title: title, description: description, image: image, url: request.original_url }
 
-#project-content
-  - @projects.each do |project|
-    = render "bubble", project: project
+.left
+  #project-content
+    - @projects.each do |project|
+      = render "bubble", project: project
 
-- if user_signed_in?
-  .add-new
-    = link_to image_tag("icons/add.png"), new_project_path
+  - if user_signed_in?
+    .add-new
+      = link_to image_tag("icons/add.png"), new_project_path
+
+.right

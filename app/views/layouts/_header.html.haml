@@ -1,7 +1,7 @@
 = link_to "Joel Graycar", root_url, id: "logo-text"
 %nav#nav-bar
   .link#projects-page
-    = link_to "PROJECTS", projects_path, class: "main-link"
+    %a.main-link PROJECTS
     - projects = Project.all.order('title ASC, year')
     %ul
       - projects.each do |project|
