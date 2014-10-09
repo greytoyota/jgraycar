@@ -5,9 +5,8 @@
     = metamagic title: "Joel Graycar",
       keywords: "joel, graycar, personal, portfolio"
 
-    %link(href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css")
-    %link(href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css")
-    %link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css")
+    %link(href="//brick.a.ssl.fastly.net/Inconsolata:400,500/Lato:400,700" rel="stylesheet" type="text/css")
+    %link(href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css')
 
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
@@ -17,19 +16,24 @@
     = favicon_link_tag "favicon.png", rel: "apple-touch-icon", type: "image/png"
 
   %body{ class: "#{controller.controller_name}", id: "#{controller.action_name}" }
+    %section.spacer
+      = link_to image_tag("semi-colon.svg"), root_url, id: "semi-colon"
     %header#nav-header
       = render "layouts/header"
-    #page-wrapper
-      #content-wrapper
 
-        .devise-notice
-          - if notice
-            %p.alert-success= notice
-          - if alert
-            %p.alert-danger= alert
+    .devise-notice
+      - if notice
+        %p.alert-success= notice
+      - if alert
+        %p.alert-danger= alert
 
-        #page-content
-          = yield
+    = yield
 
-      %footer#external-links
-        = render "layouts/footer"    
+    :javascript
+      (function() {
+      var leftHeight = $('.left').css('height');
+      var leftPxHeight = parseInt(leftHeight.split('px')[0]);
+      leftPxHeight += 200;
+      leftHeight = leftPxHeight + 'px'
+      $('.right').css({'minHeight': leftHeight});
+      }).call(this);

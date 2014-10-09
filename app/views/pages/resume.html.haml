@@ -1,0 +1,26 @@
+- title = "Work Experience"
+- description = "View my past work experience and positions."
+- image = URI.join(root_url, image_path("favicon.png"))
+
+- meta title: title, description: description,
+  og: { title: title, description: description, image: image, url: request.original_url }
+
+.left
+  %h2 Work Experience
+
+  = render "jobs/jobs_feed", jobs: @jobs
+
+  %section#courses
+    %h1 Courses
+    = render "courses/courses_feed", courses: @courses
+
+.right
+  %section.blokk-filler
+    :markdown
+      Lorem ipsum dolor sit amet, con sectetur adip iscing elit. Maece nas placerat scel erisque congue. Pellent esque tinc idunt lectus nec arcu venen atis, vitae suscipit nisl imperd iet. In non metus id dolor tris tique commodo. Integer ullamco rper augue solli citudin justo posuere, sed acc umsan eros auctor. Duis eff icitur vesti bulum sapien ac dapibus. Praesent mauris lorem, ultricies in posuere quis, tincidunt at nibh. Mauris eget felis pelle ntesque, eleifend felis nec, facilisis justo. Duis quis sagittis sapien. Etiam at ipsum et est commodo bibendum. Ut sed lacus venen  atis dolor fer mentum faucibus. Pe llentesque et male suada ipsum. Etiam pelle ntesque pellent esque erat sed element um.
+
+      Pel lent esque arcu nibh, l obortis da pibus effic itur vel, susc ipit at metus. Nam leo risus, ac cumsan qu is risus ac, pharetr a euismod nulla. Phase llus finibus semper libero eget eleifend. Curabitur blandit ut augue ut porta. Cras quis massa blandit, pretium diam sit amet, tempor purus. Proin eu sapien augue. Ph asell us luctus diam nulla, iaculis conva llis lectus egestas et. Sed aliquam mi quam, bib endum con vallis augue effic itur vel. Nunc con sequat digniss im risus pretium phar etra.
+
+      Etiam vol utpat auctor diam in ultrici es. Donec porta ut sapien ut commodo. Ut blandit mauris nec aliq uam porta. Ve stibulum mattis a ante id finibus. Nunc id mollis diam. Cras ex leo, porta vitae vulpu tate auctor, commodo at nibh. Etiam porttitor dapibus dui, quis ornare justo aliquam eget. Vestibulum ante ipsum primis in faucibus orci luctus et u ltrices pos uere cubilia Curae; Donec sed volu tpat tortor. Mauris sit amet rhoncus magna.
+  = link_to "Download", "/resume.pdf", id: "download-part", class: "resume-link"
+  = link_to "PDF", "/resume.pdf", id: "pdf-part", class: "resume-link"

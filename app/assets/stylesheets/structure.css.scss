@@ -1,0 +1,52 @@
+@import "variables";
+@import "mixins";
+
+.spacer {
+    width: 7%;
+    float: left;
+    min-height: 300px;
+    height: 100%;
+    #semi-colon {
+        float: right;
+        margin-right: 25%;
+        margin-top: 12px;
+        height: 100%;
+        img {
+            height: 6%;
+        }
+    }
+}
+
+.left {
+    width: 43%;
+    min-height: 800px;
+    height: 100%;
+    float: left;
+    background-color: $light-gray;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding-right: 2%;
+}
+
+.right {
+    width: 50%;
+    min-height: 100%;
+    background-color: $right-bg;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding: 2% 3.5%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+body {
+    margin: 0px;
+    background-color: $light-gray;
+    height: 100%;
+    * {
+        -webkit-font-smoothing: antialiased;
+    }
+}

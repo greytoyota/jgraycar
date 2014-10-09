@@ -1,0 +1,81 @@
+@import "variables";
+@import "mixins";
+
+header#nav-header {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    #logo-text {
+        font-family: $sub-font;
+        font-size: 335%;
+        font-weight: bold;
+        color: $red;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 1%;
+    }
+}
+
+#nav-bar {
+    text-align: left;
+    .link {
+        display: inline-block;
+        margin-right: 3%;
+        a {
+            color: black;
+            text-decoration: none;
+            font-family: $sub-font;
+            font-size: 180%;
+            font-weight: bold;
+        }
+        ul {
+            position: absolute;
+            left: -9999px;
+            list-style-type: none;
+            width: 20%;
+            background-color: $teal;
+            padding-left: 0px;
+            li {
+                background-color: $teal;
+                padding: 4px;
+                text-align: left;
+                a {
+                    padding-left: 7px;
+                    color: black;
+                    font-family: $sub-font;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    .link#projects-page {
+        padding: 10px;
+        margin-left: -10px;
+    }
+    .link#projects-page:hover {
+        background-color: $teal;
+        a.main-link {
+            color: white;
+        }
+        ul {
+            padding-bottom: 5px;
+            z-index: 5;
+            left: auto;
+            margin-left: -10px;
+            margin-top: 5px;
+        }
+    }
+}
+
+body.projects #nav-bar .link#projects-page,
+body.pages#resume #nav-bar .link#resume-page,
+body.pages#about #nav-bar .link#about-page {
+    a.main-link {
+        color: $teal;
+    }
+}
+
+body.projects #nav-bar .link#projects-page:hover {
+    a.main-link {
+        color: white;
+    }
+}

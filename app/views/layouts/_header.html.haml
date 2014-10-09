@@ -1,25 +1,25 @@
-= link_to image_tag("logo.svg"), root_url
+= link_to "Joel Graycar", root_url, id: "logo-text"
 %nav#nav-bar
   .link#projects-page
-    = link_to "PROJECTS", projects_path, class: "main-link"
+    %a.main-link PROJECTS
     - projects = Project.all.order('title ASC, year')
     %ul
       - projects.each do |project|
         %li
           = link_to project.title, project
+      - if user_signed_in?
+        %li
+          = link_to "Add Project", new_project_path
 
   - if user_signed_in?
     .link#courses-page
       = link_to "COURSES", courses_path, class: "main-link"
 
-  .link#jobs-page
+  .link#resume-page
     = link_to "RESUME", "/resume", class: "main-link"
 
   .link#about-page
     = link_to "ABOUT", "/about", class: "main-link"
-
-  .link#contact-page
-    = link_to "CONTACT", "/contact", class: "main-link"
 
   - if user_signed_in?
     .link

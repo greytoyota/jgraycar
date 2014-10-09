@@ -7,4 +7,9 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def resume
+    @courses = Course.all.order('identifier ASC')
+    @jobs = Job.all.order('title ASC')
+  end
 end

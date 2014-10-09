@@ -1,0 +1,5 @@
+%section.code-snippets
+  %h2#snippets-header // Code Snippet
+  - project.code_links.each do |code_link|
+    %h3(class="code-link")= code_link.title
+    .gist(data-src="#{code_link.link}.json")

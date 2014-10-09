@@ -1,3 +1,4 @@
 %article.course
-  = link_to course.identifier + " - ", course.link
-  = link_to course.title, course.link, class: "description"
+  %h3= course.identifier
+  %section.description
+    = link_to course.title, course.link, class: "course-link"

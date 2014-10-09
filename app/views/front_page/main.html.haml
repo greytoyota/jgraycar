@@ -6,11 +6,15 @@
   description: description,
   og: { title: title, description: description, image: image, url: root_url }
 
-%h1 Welcome!
+.left
+  %h1 Welcome!
 
-#intro
-  :markdown
-    I am Joel Graycar, a third-year Computer Science major at the University of California, Berkeley. Please feel free to browse through a few of the projects I have worked on, and to contact me at [jgraycar@berkeley.edu](jgraycar@berkeley.edu) with any questions or inquiries.
+  #intro
+    :markdown
+      I'm Joel, a third-year Computer Science major at the University of California, Berkeley. Please feel free to browse through a few of the projects I have worked on, and to contact me at [jgraycar@berkeley.edu](mailto:jgraycar@berkeley.edu) with any questions or inquiries.
 
-#pic-of-me
-  = image_tag("front-page-me.jpg")
+.right
+  = image_tag("joel/mac_cheese.jpg", class: "joel-pic")
+  .text
+    :markdown
+      I grew up in [Pacifica, California](http://en.wikipedia.org/wiki/Pacifica,_California), just a few miles south of San Francisco. These days, you'll most often find me exploring the [Southside](http://en.wikipedia.org/wiki/Southside,_Berkeley,_California) of Berkeley, looking for an awesome new restaurant to enjoy.

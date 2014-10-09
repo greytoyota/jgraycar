@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixins";
+
+section.code-snippets {
+    #snippets-header {
+        color: $green;
+        font-size: 160%;
+        word-spacing: 7px;
+    }
+    h3.code-link {
+        color: $coral;
+    }
+    .gist {
+        .gist-file {
+            border: 0px black solid;
+        }
+        .gist-data {
+            border: 0px black solid;
+            background-color: transparent;
+            td.line-numbers {
+                display: none;
+            }
+            td.line-data {
+                display: initial;
+                * {
+                    font-size: 110%;
+                    color: $code-gray;
+                }
+            }
+        }
+        .gist-meta {
+            display: none;
+        }
+    }
+}

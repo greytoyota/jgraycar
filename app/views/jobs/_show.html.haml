@@ -1,5 +1,5 @@
 %article.job
-  :markdown
-    **#{job.location} -**
-  %p= job.title
-  %p= job.end_date.length > 0 ? "(#{job.start_date} - #{job.end_date})" : "(#{job.start_date})"
+  %h3= job.location
+  .job-description
+    :markdown
+      #{job.description}
