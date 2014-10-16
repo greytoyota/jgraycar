@@ -52,6 +52,6 @@ class CodeLinksController < ApplicationController
   end
 
   def code_link_params
-    params.require(:code_link).permit(:title, :link, :performance_id)
+    params.require(:code_link).permit(:title, :link, :performance_id, :description)
   end
 end

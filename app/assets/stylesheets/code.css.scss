@@ -33,3 +33,16 @@ section.code-snippets {
         }
     }
 }
+
+.snippet-links {
+    margin-top: 40px;
+    .snippet-link {
+        h3 {
+            color: $red;
+            margin-bottom: 0px;
+        }
+        p {
+            margin-top: 1%;
+        }
+    }
+}

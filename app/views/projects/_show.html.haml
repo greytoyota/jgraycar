@@ -15,6 +15,10 @@
     :markdown
       #{project.description}
 
-  -# .project-pic
-  -#   = link_to image_tag(project.icon.url(:original)), project.link,
-  -#     target: "_blank", class: "project-pic"
+  .snippet-links
+    %h2 Code Snippets
+    - project.code_links.each do |code_link|
+      %article.snippet-link
+        %h3= code_link.title
+        :markdown
+          #{code_link.description}

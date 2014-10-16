@@ -44,6 +44,9 @@ header#nav-header {
                     font-family: $sub-font;
                     font-weight: normal;
                 }
+                a:hover {
+                    color: white;
+                }
             }
         }
     }
@@ -54,6 +57,7 @@ header#nav-header {
     .link#projects-page:hover {
         background-color: $teal;
         a.main-link {
+            cursor: default;
             color: white;
         }
         ul {
