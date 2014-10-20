@@ -3,8 +3,13 @@
 
 #login
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    = f.input :login
-    = f.input :password
-    = f.button :submit, "Sign In"
-    #forgot-pass
+    .row
+      .column.small-6
+        = f.input :login
+      .column.small-6
+        = f.input :password
+      .column.small-4
+      = f.button :submit, "Sign In"
+    .row#forgot-pass
+      .column.small-12
       = render "devise/shared/links"

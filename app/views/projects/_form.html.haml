@@ -1,21 +1,30 @@
 = simple_form_for @project do |f|
+  .row
+    .column.small-12
+      = f.input :title
 
-  = f.input :title
+    .column.small-12
+      = f.input :year
 
-  = f.input :year
+    .column.small-12
+      = f.input :link
 
-  = f.input :link
+    .column.small-12
+      = f.input :description
 
-  = f.input :description
+    .column.small-7
+      = f.input :icon
+    .column.small-2
+      = f.input :delete_icon, as: :boolean
 
-  = f.input :icon
-  = f.input :delete_icon, as: :boolean
+  %section#nested-fields
+    .row
+      %h2.column.small-12 Code Links
+    #code-links.row
+      = f.simple_fields_for :code_links do |code_link|
+        = render "code_link_fields", f: code_link
+      = link_to_add_association "Add Code Link", f, :code_links, class: "column small-12"
 
-  %h2 Code Links
-  #code_links
-    = f.simple_fields_for :code_links do |code_link|
-      = render "code_link_fields", f: code_link
-    .links
-      = link_to_add_association "Add Code Link", f, :code_links
-
-  = f.button :submit
+  .row
+    .column.small-5
+      = f.button :submit, class: "button small"

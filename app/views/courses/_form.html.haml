@@ -1,9 +1,11 @@
 = simple_form_for @course do |f|
 
-  = f.input :identifier
-
-  = f.input :title
-
-  = f.input :link
-
-  = f.button :submit
+  .row
+    .column.small-3
+      = f.input :identifier
+    .column.small-9
+      = f.input :link
+    .column.small-12
+      = f.input :title
+    .column.small-12
+      = f.button :submit

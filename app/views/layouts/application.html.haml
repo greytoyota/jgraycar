@@ -9,11 +9,15 @@
     %link(href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css')
 
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag :modernizr
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
 
     = favicon_link_tag "favicon.png", rel: "icon", type: "image/png"
     = favicon_link_tag "favicon.png", rel: "apple-touch-icon", type: "image/png"
+
+    %meta(name="mobile-web-app-capable" content="yes")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
   %body{ class: "#{controller.controller_name}", id: "#{controller.action_name}" }
     %section.spacer
@@ -23,17 +27,10 @@
 
     .devise-notice
       - if notice
-        %p.alert-success= notice
+        .alert-box.success(data-alert)
+          = notice
       - if alert
-        %p.alert-danger= alert
+        .alert-box.alert
+          = alert
 
     = yield
-
-    :javascript
-      (function() {
-      var leftHeight = $('.left').css('height');
-      var leftPxHeight = parseInt(leftHeight.split('px')[0]);
-      leftPxHeight += 200;
-      leftHeight = leftPxHeight + 'px'
-      $('.right').css({'minHeight': leftHeight});
-      }).call(this);

@@ -1,5 +1,9 @@
-.nested-fields
-  = f.input :title
-  = f.input :link
-  = f.input :description
-  = link_to_remove_association "Remove Link", f
+.nested-fields.column.small-6
+  .row
+    .column.small-12
+      = f.input :title
+    .column.small-12
+      = f.input :link
+    .column.small-12
+      = f.input :description
+    = link_to_remove_association "Remove Link", f, class: "column small-12"

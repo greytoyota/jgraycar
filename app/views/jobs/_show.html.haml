@@ -1,5 +1,12 @@
 %article.job
-  %h3= job.location
+  %h3 #{job.title} - #{job.location}
+  - if user_signed_in?
+    .icons.row
+      = link_to edit_job_path(job), class: "column small-6" do
+        %i.fi-pencil
+      = link_to job_path(job), method: :delete, class: "column small-6",
+        data: { confirm: "Are you sure you'd like to delete job '#{job.title}'?" } do
+        %i.fi-trash
   .job-description
     :markdown
       #{job.description}

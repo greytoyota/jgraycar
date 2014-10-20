@@ -11,9 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require google_analytics
 //= require gists
 //= require cocoon
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
