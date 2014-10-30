@@ -37,3 +37,7 @@ a.resume-link#pdf-part {
     font-size: 200%;
     font-weight: bold;
 }
+
+a.resume-link:hover {
+    color: $green;
+}

@@ -1,6 +1,8 @@
 %section.code-snippets
   %h2#snippets-header // Code Snippet
+  .default
+    <p>Feel free to select a <span>Code Snippet</span> on the left</p> 
   - project.code_links.each do |code_link|
-    %article.snippet(id="snippet-#{project.id}")
+    %article.code-snippet(id="code-snippet-#{code_link.id}")
       %h3(class="code-link")= code_link.title
       .gist(data-src="#{code_link.link}.json")

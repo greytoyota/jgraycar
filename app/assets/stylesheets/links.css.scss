@@ -6,3 +6,7 @@ a {
     font-family: $main-font;
     text-decoration: none;
 }
+
+a:hover {
+    color: darken($red, 10%);
+}

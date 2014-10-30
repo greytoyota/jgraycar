@@ -2,6 +2,17 @@
 @import "mixins";
 
 section.code-snippets {
+    .default {
+        margin-top: 20px;
+        p {
+            font-family: $sub-font;
+            color: $green;
+            font-size: 130%;
+            span {
+                color: $coral;
+            }
+        }
+    }
     #snippets-header {
         color: $green;
         font-size: 160%;
@@ -34,9 +45,19 @@ section.code-snippets {
     }
 }
 
+.code-snippet {
+    display: none;
+}
+
 .snippet-links {
     margin-top: 40px;
     .snippet-link {
+        margin-bottom: 25px;
+        a.code-link {
+            font-family: $sub-font;
+            font-size: 120%;
+            font-weight: bold;
+        }
         h3 {
             color: $red;
             margin-bottom: 0px;

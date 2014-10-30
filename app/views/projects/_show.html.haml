@@ -6,10 +6,12 @@
     %h2.title= project.title
 
   - if user_signed_in?
-    %section.edit-icons
-      = link_to image_tag("icons/edit.png"), edit_project_path(project)
-      = link_to image_tag("icons/delete.png"), project_path(project), method: :delete,
-        data: { confirm: "Are you sure you want to delete project #{project.title}?" }
+    .icons.row
+      = link_to edit_project_path(project), class: "column small-6" do
+        %i.fi-pencil
+      = link_to project_path(project), method: :delete, class: "column small-6",
+        data: { confirm: "Are you sure you'd like to delete project '#{project.title}'?" } do
+        %i.fi-trash
 
   .description
     :markdown
@@ -19,6 +21,6 @@
     %h2 Code Snippets
     - project.code_links.each do |code_link|
       %article.snippet-link
-        %h3= code_link.title
-        -#:markdown
+        = link_to code_link.title, "javascript:void(0)", onclick: "showOnlyOne('code-snippet-#{code_link.id}');", class: "code-link"
+        :markdown
           #{code_link.description}
